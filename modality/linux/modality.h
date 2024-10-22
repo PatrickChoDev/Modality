@@ -1,18 +1,18 @@
-#ifndef FLUTTER_MY_APPLICATION_H_
-#define FLUTTER_MY_APPLICATION_H_
+#ifndef FLUTTER_MODALITY_APP_H_
+#define FLUTTER_MODALITY_APP_H_
 
 #include <gtk/gtk.h>
 
-G_DECLARE_FINAL_TYPE(MyApplication, my_application, MY, APPLICATION,
+G_DECLARE_FINAL_TYPE(ModalityApplication, modality_app, MODALITY, APP,
                      GtkApplication)
 
 /**
- * my_application_new:
+ * modality_app_new:
  *
  * Creates a new Flutter-based application.
  *
- * Returns: a new #MyApplication.
+ * Returns: a new #ModalityApplication.
  */
-MyApplication* my_application_new();
+ModalityApplication *modality_app_new();
 
-#endif  // FLUTTER_MY_APPLICATION_H_
+#endif // FLUTTER_MODALITY_APP_H_

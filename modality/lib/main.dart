@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:modality/widgets/devices.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ModalityApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ModalityApp extends StatelessWidget {
+  const ModalityApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -31,30 +32,21 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const ModalityDashboard(title: 'Modality Dashboard'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+class ModalityDashboard extends StatefulWidget {
+  const ModalityDashboard({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ModalityDashboard> createState() => _ModalityDashboardState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ModalityDashboardState extends State<ModalityDashboard> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -112,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const DevicesWidget(devices: ["Entry One", "Entry Two"]),
           ],
         ),
       ),

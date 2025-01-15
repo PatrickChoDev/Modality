@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS 
+        "main.cpp"
+        "core/softap/softap.cpp"
+        "core/mdns/mdns_service.cpp"
+        "server/httpd/http_server.cpp"
+    INCLUDE_DIRS 
+        "."
+    REQUIRES 
+        esp_wifi
+        mdns
+        esp_http_server
+        nvs_flash
+)

@@ -1,58 +1,32 @@
-# Modality Core
+# _Sample project_
 
-Modality Core is an ESP-IDF oriented software designed for the ESP32-S3 board. This project aims to create a robust ground station that can seamlessly integrate with the Modality software (Flutter part) for enhanced meshing capabilities.
+(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
-## Features
+This is the simplest buildable example. The example is used by command `idf.py create-project`
+that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
 
-- **ESP-IDF Integration**: Leverages the ESP-IDF framework for efficient development on the ESP32-S3 board.
-- **Ground Station**: Acts as a central hub for communication and control.
-- **Modality Integration**: Ready to mesh with the Modality software built using Flutter.
 
-## Getting Started
 
-### Prerequisites
+## How to use example
+We encourage the users to use the example as a template for the new projects.
+A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
 
-- ESP-IDF installed on your development machine.
-- ESP32-S3 board.
-- Flutter environment set up for the Modality software.
+## Example folder contents
 
-### Installation
+The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
 
-1. Clone the repository:
-  ```sh
-  git clone https://github.com/yourusername/modality-core.git
-  ```
-2. Navigate to the project directory:
-  ```sh
-  cd modality-core
-  ```
-3. Set up the ESP-IDF environment:
-  ```sh
-  . $HOME/esp/esp-idf/export.sh
-  ```
-4. Build the project:
-  ```sh
-  idf.py build
-  ```
-5. Flash the firmware to the ESP32-S3 board:
-  ```sh
-  idf.py flash
-  ```
+ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
+files that provide set of directives and instructions describing the project's source files and targets
+(executable, library, or both). 
 
-## Usage
+Below is short explanation of remaining files in the project folder.
 
-1. Power on the ESP32-S3 board.
-2. Connect to the ground station via the designated communication protocol.
-3. Use the Modality software (Flutter part) to interact with the ground station.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any inquiries or support, please contact [PatrickChoDev](https://github.com/PatrickChoDev).
+```
+├── CMakeLists.txt
+├── main
+│   ├── CMakeLists.txt
+│   └── main.c
+└── README.md                  This is the file you are currently reading
+```
+Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
+They are not used or needed when building with CMake and idf.py.
